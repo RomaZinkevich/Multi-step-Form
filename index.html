@@ -43,7 +43,7 @@
       </div>
     </aside>
     <div class="step-container">
-      <div class="step-1-form">
+      <div class="form step-1">
         <h1>Personal info</h1>
         <h2>Please provide your name, email address and phone number.</h2>
         <form action="submit">
@@ -56,6 +56,49 @@
           <button type="submit">Next Step</button>
         </form>
       </div>
+      <div class="form step-2 active">
+        <h1>Select your plan</h1>
+        <h2>You have the option of monthly or yearly billing.</h2>
+        <div class="plans">
+          <div class="plan arcade active">
+            <img src="/assets/images/icon-arcade.svg" alt="">
+            <div class="plan-details">
+              <p>Arcade</p>
+              <p class="price">$9/mo</p>
+            </div>
+          </div>
+          <div class="plan advanced">
+            <img src="/assets/images/icon-advanced.svg" alt="">
+            <div class="plan-details">
+              <p>Advanced</p>
+              <p class="price">$12/mo</p>
+            </div>
+          </div>
+          <div class="plan pro">
+            <img src="/assets/images/icon-pro.svg" alt="">
+            <div class="plan-details">
+              <p>Pro</p>
+              <p class="price">$15/mo</p>
+            </div>
+          </div>
+        </div>
+        <div class="billing-changer">
+          <p>Monthly</p>
+          <div class="radios">
+            <div class="radio-container">
+              <input type="radio" name="theme" value="billing1" checked>
+              <span class="checkmark"></span>
+              <span class="placeholder"></span>
+            </div>
+            <div class="radio-container">
+              <input type="radio" name="theme" value="billing2">
+              <span class="checkmark"></span>
+              <span class="placeholder"></span>
+            </div>
+          </div>
+          <p>Yearly</p>
+        </div>
+        <button>Next Step</button>
     </div>
   </div>
 </body>
