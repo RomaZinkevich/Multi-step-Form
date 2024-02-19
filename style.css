@@ -293,7 +293,7 @@ button {
   cursor: pointer;
 }
 
-.whitebtn {
+.back {
   border: none;
   background-color: white;
   color: hsl(235,5%,58%);
