@@ -135,6 +135,7 @@ aside {
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
 }
 
 .step-1.form input {
@@ -154,19 +155,6 @@ aside {
   margin: 1rem 0 0.5rem;
   font-size: 14px;
   font-weight: 700;
-}
-
-.step-1.form button {
-  align-self: end;
-  justify-self: end;
-  padding: 1rem 1.7rem;
-  margin-top: auto;
-  margin-bottom: 1rem;
-  border: none;
-  border-radius: 0.5rem;
-  background-color: hsl(214,94%,18%);
-  color: white;
-  font-size: 16px;
 }
 
 /* Step 2 */
@@ -215,29 +203,44 @@ aside {
 .billing-changer {
   display: flex;
   background-color: hsl(230,75%,98%);
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 0.7rem;
 }
 
 .billing-changer p {
   margin: 0 2rem;
 }
+
+.btns {
+  width: 100%;
+  align-self: end;
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 /* Switch */
 .radios {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 0.15rem;
+  grid-gap: 0.7rem;
   align-items: center;
   justify-content: center;
-  border-radius: 0.5rem;
-  padding: 0.12rem;
-  padding-bottom: 0.1rem;
+  border-radius: 1rem;
+  padding: 0.4rem 0.25rem 0.25rem;
   height: 100%;
-  background-color: black;
+  background-color: hsl(213, 96%, 18%);
 }
 
 .radio-container{
   position: relative;
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
 }
 
 .radio-container:hover  {
@@ -258,7 +261,7 @@ aside {
   height: 100%;
   aspect-ratio: 1/1;
   opacity: 0;
-  background-color:cyan;
+  background-color:white;
   border-radius: 50%;
   z-index: 0;
 }
@@ -272,4 +275,26 @@ aside {
 .radio-container input:checked ~ .checkmark {
   opacity: 1;
   font-weight: 700;
+}
+
+/* Buttons */
+button {
+  align-self: end;
+  justify-self: end;
+  padding: 1rem 1.7rem;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: hsl(214,94%,18%);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.whitebtn {
+  border: none;
+  background-color: white;
+  color: hsl(235,5%,58%);
 }
