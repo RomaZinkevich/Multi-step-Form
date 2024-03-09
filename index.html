@@ -59,26 +59,26 @@
       <div class="form step-2">
         <h1>Select your plan</h1>
         <h2>You have the option of monthly or yearly billing.</h2>
-        <div class="plans">
-          <div class="plan arcade active">
+        <div class="checkbox-container plans">
+          <div class="checkbox plan arcade active">
             <img src="/assets/images/icon-arcade.svg" alt="">
             <div class="plan-details">
               <p>Arcade</p>
-              <p class="price">$9/mo</p>
+              <p class="gray-text">$9/mo</p>
             </div>
           </div>
-          <div class="plan advanced">
+          <div class="checkbox plan advanced">
             <img src="/assets/images/icon-advanced.svg" alt="">
             <div class="plan-details">
               <p>Advanced</p>
-              <p class="price">$12/mo</p>
+              <p class="gray-text">$12/mo</p>
             </div>
           </div>
-          <div class="plan pro">
+          <div class="checkbox plan pro">
             <img src="/assets/images/icon-pro.svg" alt="">
             <div class="plan-details">
               <p>Pro</p>
-              <p class="price">$15/mo</p>
+              <p class="gray-text">$15/mo</p>
             </div>
           </div>
         </div>
@@ -102,8 +102,48 @@
           <button class="back">Go Back</button>
           <button class="next">Next Step</button>
         </div>
+      </div>
+      <div class="form step-3">
+        <h1>Pick add-ons</h1>
+        <h2>Add-ons help enhance your gaming experience.</h2>
+        <div class="checkbox-container">
+          <div class="checkbox online active">
+            <div class="title">
+              <input type="checkbox" id="online" name="online" checked />
+              <div class="desc">
+                <p>Online Service</p>
+                <p class="gray-text">Access to multiplayer games</p>
+              </div>
+            </div>
+            <p class="price">+$1/mo</p>
+          </div>
+          <div class="checkbox storage active">
+            <div class="title">
+              <input type="checkbox" id="storage" name="storage" checked />
+              <div class="desc">
+                <p>Larger storage</p>
+                <p class="gray-text">Extra 1TB of cloud save</p>
+              </div>
+            </div>
+            <p class="price">+$2/mo</p>
+          </div>
+          <div class="checkbox profile">
+            <div class="title">
+              <input type="checkbox" id="profile" name="profile" />
+              <div class="desc">
+                <p>Customizable profile</p>
+                <p class="gray-text">Custom theme on your profile</p>
+              </div>
+            </div>
+            <p class="price">+$2/mo</p>
+          </div>
+        </div>
+        <div class="btns">
+          <button class="back">Go Back</button>
+          <button class="next">Next Step</button>
+        </div>
+      </div>
     </div>
-  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="sliderAnimation.js"></script>
   <script src="main.js"></script>
