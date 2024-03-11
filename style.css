@@ -216,6 +216,15 @@ aside {
   margin: 0 2rem;
 }
 
+.step-2 .checkbox p.blue-text {
+  font-size: 14px;
+  display: none;
+}
+
+.checkbox p.yearly {
+  display: none;
+}
+
 .btns {
   width: 100%;
   align-self: end;
@@ -257,7 +266,7 @@ aside {
   line-height: 1rem;
 }
 
-.checkbox p.price {
+.checkbox p.blue-text {
   color: blue;
   font-weight: 400;
   font-size: 16px;

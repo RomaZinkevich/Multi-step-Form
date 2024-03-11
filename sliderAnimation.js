@@ -5,6 +5,7 @@ for (let i=0; i<2; i++) {
     let btn = inputButtonsArray[i];
     btn.addEventListener("change", () => {
         animation(i);
+        changeBillingPeriod(i);
     })
 }
 

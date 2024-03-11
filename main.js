@@ -9,6 +9,8 @@ const nextBtnsArray = Array.from(nextBtns);
 const backBtnsArray = Array.from(backBtns);
 const checkboxesInputsArray = Array.from(checkboxesInputs);
 
+let billingPeriod = 0
+
 
 plansArray.forEach((el, index) => {
     el.addEventListener("click", () => {
@@ -60,4 +62,11 @@ function prevStep(index) {
     forms[index].classList.toggle("active");
     document.querySelector(`.road .number.selected`).classList.toggle("selected");
     document.querySelector(`.road.step-${index+1} .number`).classList.toggle("selected");
+}
+
+function changeBillingPeriod(index) {
+    billingPeriod = index
+    document.querySelectorAll(".step-2 .checkbox p.blue-text").forEach(el => el.style.display=index ? "block" : "none");
+    document.querySelectorAll(".checkbox p.yearly").forEach(el => el.style.display=index ? "block" : "none");
+    document.querySelectorAll(".checkbox p.monthly").forEach(el => el.style.display=index ? "none" : "block");
 }
