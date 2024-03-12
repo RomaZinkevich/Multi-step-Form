@@ -9,7 +9,12 @@ const nextBtnsArray = Array.from(nextBtns);
 const backBtnsArray = Array.from(backBtns);
 const checkboxesInputsArray = Array.from(checkboxesInputs);
 
-let billingPeriod = 0
+let billingPeriod = 0;
+let formData = {
+    name:"",
+    email:"",
+    phone:""
+}
 
 
 plansArray.forEach((el, index) => {
@@ -51,10 +56,12 @@ function checkFeature(index) {
 }
 
 function nextStep(index) {
+    if (!saveToForm()) return;
     document.querySelector(".form.active").classList.toggle("active");
     forms[index+1].classList.toggle("active");
     document.querySelector(`.road .number.selected`).classList.toggle("selected");
     document.querySelector(`.road.step-${index+2} .number`).classList.toggle("selected");
+
 }
 
 function prevStep(index) {
@@ -66,7 +73,25 @@ function prevStep(index) {
 
 function changeBillingPeriod(index) {
     billingPeriod = index
-    document.querySelectorAll(".step-2 .checkbox p.blue-text").forEach(el => el.style.display=index ? "block" : "none");
-    document.querySelectorAll(".checkbox p.yearly").forEach(el => el.style.display=index ? "block" : "none");
-    document.querySelectorAll(".checkbox p.monthly").forEach(el => el.style.display=index ? "none" : "block");
+    document.querySelectorAll(".step-2 .checkbox p.blue-text").forEach(el => el.classList.toggle("active"));
+    document.querySelectorAll(".checkbox p.yearly").forEach(el => el.classList.toggle("active"));
+    document.querySelectorAll(".checkbox p.monthly").forEach(el => el.classList.toggle("active"));
+}
+
+function saveToForm(){
+    let form = document.querySelector("form");
+    let formInfo = new FormData(form);
+    let passFlag = true;
+    console.log(formInfo)
+    for (var pair of formInfo.entries()) {
+      formData[pair[0]]=pair[1];
+      if (!pair[1]) passFlag=false;
+    }
+    return passFlag && checkForms();
+}
+
+function checkForms(){
+    let emailChecked = /.+@.+\..+/.test(formData.email);
+    let phoneChecked = /\+\d{8,}$/.test(formData.phone);
+    console.log(phoneChecked)
 }

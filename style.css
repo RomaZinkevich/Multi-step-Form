@@ -221,7 +221,23 @@ aside {
   display: none;
 }
 
+.step-2 .checkbox p.blue-text.active {
+  display: block;
+}
+
 .checkbox p.yearly {
+  display: none;
+}
+
+.checkbox p.yearly.active {
+  display: block;
+}
+
+.checkbox p.monthly.active {
+  display: block;
+}
+
+.checkbox p.monthly {
   display: none;
 }
 
